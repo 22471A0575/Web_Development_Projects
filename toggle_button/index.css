@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 100vh;
+    background:linear-gradient(70deg,red,blue);
+}
+.field{
+    width:100px;
+    height: 50px;
+    background-color:grey;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.field::before{
+    position: absolute;
+    content: "";
+    width:40px;
+    height: 40px;
+    background-color:white;
+    border-radius:50% ;
+    margin: 5px;
+    transition: 0.2s;
+}
+.button:checked +.field{
+background-color: blue;
+}
+.button:checked+.field::before{
+    transform: translate(50px);
+}
+#button{
+display: none;
+}
